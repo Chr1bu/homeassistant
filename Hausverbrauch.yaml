@@ -6,7 +6,7 @@ template:
     state_class: measurement
     state: >-
       {{
-        states('sensor.<SMA-metering_power_absorbed'>)|float(0)
+        states('sensor.<SMA-metering_power_absorbed>')|float(0)
         + (states('sensor.<SMA-pv_power>')|float(0)
         - states('sensor.<SMA-metering_power_supplied>')|float(0))
       }}
