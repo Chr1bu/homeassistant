@@ -1,11 +1,12 @@
-	- name: Hausverbrauch
+template:
+  - name: Hausverbrauch
     unique_id: house_power
     unit_of_measurement: W
     device_class: power
     state_class: measurement
     state: >-
-    {{ 
-      states('sensor.<SMA>metering_power_absorbed')|float(0)
-      + (states('sensor.<SMA>pv_power')|float(0)
-      - states('sensor.<SMA>metering_power_supplied')|float(0))
-    }}
+      {{
+        states('sensor.<SMA-metering_power_absorbed'>)|float(0)
+        + (states('sensor.<SMA-pv_power>')|float(0)
+        - states('sensor.<SMA-metering_power_supplied>')|float(0))
+      }}
