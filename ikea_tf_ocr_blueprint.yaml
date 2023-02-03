@@ -14,7 +14,7 @@ blueprint:
       selector:
         device:
           integration: zha
-          manufacturer: "\u0002KE"
+          #manufacturer: "\u0002KE"
           model: "TRADFRI open/close remote"
     cover:
       name: Cover
