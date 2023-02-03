@@ -13,7 +13,7 @@ blueprint:
       description: "IKEA open/close remote to use"
       selector:
         device:
-          integration: "Zigbee Home Automation"
+          integration: zha
           manufacturer: "\u0002KE"
           model: "TRADFRI open/close remote"
     cover:
