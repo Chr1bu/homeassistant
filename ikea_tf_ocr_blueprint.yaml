@@ -14,7 +14,9 @@ blueprint:
       selector:
         device:
           integration: zha
-          #manufacturer: "\u0002KE"
+          #manufacturer: "\x02KE"
+          #manufacturer: "IKEA of Sweden"
+          manufacturer: or("IKEA of Sweden","\x02KE")
           model: "TRADFRI open/close remote"
     cover:
       name: Cover
